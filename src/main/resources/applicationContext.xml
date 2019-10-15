@@ -6,7 +6,7 @@
 	<bean name="customeryRepository"
 		class="com.pluralsight.repository.HibernateCustomerRepositoryImpl">
 	</bean>
-	<bean name="customerService" scope="singleton"
+	<bean name="customerService" scope="prototype"
 		class="com.pluralsight.service.CustomerServiceImpl"
 		autowire="constructor">
 		<!-- <constructor-arg index="0" ref="customeryRepository"></constructor-arg> -->
