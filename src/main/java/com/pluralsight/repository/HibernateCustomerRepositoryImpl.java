@@ -7,8 +7,12 @@ import com.pluralsight.model.Customer;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
-	private String dbUserName;
+	private String dbUsername;
 	
+	public void setDbUsername(String dbUsername) {
+		this.dbUsername = dbUsername;
+	}
+
 	@Override
 	public List<Customer> findAll() {
 

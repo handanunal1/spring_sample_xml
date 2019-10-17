@@ -4,18 +4,22 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	
-	<context:property-placeholder location="app.properties"/>
-	
+
+	<context:property-placeholder
+		location="app.properties" />
+
 	<bean name="customeryRepository"
 		class="com.pluralsight.repository.HibernateCustomerRepositoryImpl">
+
+		<property name="dbUsername" value="${dbUsername}"></property>
+
 	</bean>
 	<bean name="customerService" scope="prototype"
 		class="com.pluralsight.service.CustomerServiceImpl"
 		autowire="constructor">
-		<!-- <constructor-arg index="0" ref="customeryRepository"></constructor-arg> -->
-	
-	
-	<property name="dbUsername" value="${dbUserName}"></property>
+
+
+
+
 	</bean>
 </beans>
