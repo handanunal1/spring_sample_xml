@@ -16,6 +16,7 @@ public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 	@Override
 	public List<Customer> findAll() {
 
+		System.out.println(dbUsername);
 		List<Customer> customers = new ArrayList();
 
 		Customer customer = new Customer();
